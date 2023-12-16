@@ -10,7 +10,7 @@ Specifc Objectives:
 2. Clicking the navigation links scrolls to the corresponding section
 3. Clicking on a link to a section about my work will scroll to the section with titled images of my applications
 4. When the first application is presented, the application's image should be larger in size than the others
-5. When the images of the other applications are licked, the end user is taken to that deployed application
+5. When the images of the other applications are clicked, the end user is taken to that deployed application
 6. When the page is resized or viewed on various screens or devices, it has a responsive layout and adapts to the viewport
 
 
