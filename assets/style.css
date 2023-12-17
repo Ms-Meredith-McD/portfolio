@@ -64,13 +64,25 @@ header nav ul li {
 a {
     color: var(--light);
 }
+/* created container for background image to sit under header and above the main section */
+.background-container {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url(../images/main-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ }
+
+
 /* setting up flex behavior and font color for the main part of the body */
   main {
     display: flex;
     flex-wrap: wrap;
     color: var(--dark);
   }
-  
+/* defined settings for basic parameters of the three sections*/
   section {
     flex: 4;
     padding: 10px;
@@ -80,10 +92,12 @@ a {
     width: 75%;
   }
 
+  /* defined settings for the three h2 headings */
   h2 {
     margin-right: 5px;
    } 
   
+   /* defined settings for the content within the article, keeping it to the right of the h2 as well */
   article {
     border-left: 3px solid black;
     padding-left: 20px;
