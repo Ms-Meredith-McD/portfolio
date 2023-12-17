@@ -1,132 +1,123 @@
-/* Universal selector removing padding and margin from the edges of the page */
 * {
     box-sizing: border-box;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color:rgb(253, 253, 253); */
+  }
+
+:root {
+  --dark:  rgb(33, 22, 75);
+  --light: rgb(129, 124, 148);
+}
+  
+  body {
     margin: 0;
-}
-/* Element selector setting a background color of white for the body of the page */
-body {
-    background-color: #d9dcd6;
-}
-/* Element selector setting the sizing, font, and colors for the header containing the company name and nav */
+  }
+ /* Element selector setting the sizing and colors for the header containing my name */
 header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+    padding: 10px;
+    background-color: var(--dark);
+    color: var(--light);
 }
-/* Going in a level deeper than the header and defining the display and size for "Horiseon" */
-header h1 {
+/* Going in a level deeper than the header and defining the display and size for "Meredith McDonald" */
+.header-box {
+    margin: 5px;
     display: inline-block;
-    font-size: 48px;
+    font-size: 25px;
+    background-color: var(--light);
+    color: var(--dark);
+    width: 200px;
+    height: 100px;
+    padding: 10px;
 }
-/* An attempt to make the "seo" part of "Horiseon" look like a different color, maybe it works on some browsers */
-header h1 .seo {
-    color: #d9dcd6;
-}
+
 /* Setting up the style, size, spacing, and text for the navigation links in the header */
 header nav {
-    padding-top: 15px;
+    padding-top: 40px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 /* Style for the display of the nav links in the header */
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
+    padding-top: 30px;
 }
-/* removing the default blue color and underline from the nav links */
+/* }
+  header nav ul li {
+    color: var(--light);
+    padding-top: 5px;
+    float: right;
+    margin-right: 15px;
+    margin-top:5px;
+    display: inline;
+    background-color: var(--dark);
+  } */
+
+  /* removing the default blue color and underline from the nav links */
 a {
-    color: #ffffff;
-    text-decoration: none;
+    color: var(--light);
 }
-/* setting up a consistent color, size, and spacing for the paragraph elements */
-p {
-    font-size: 16px;
-    color: #ffffff;
-    margin-bottom: 32px;
-}
-/* Defining the style for the large background image at the top of the page */
-.meeting {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* defining the parameters for the main part of the page within the body not including the aside */
-main {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-/* defining the parameters for the two sections where the image floats on the left of the text */
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-/* defining the parameters for the section where the image floats on the right of the text */
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-/* setting up the style of the text box and text in the main sections */
-.options {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-/* setting up the size of the images in the main sections */
-.options img {
-    max-height: 200px;
-}
-/* setting up the style for the headers in the main sections */
-.options h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-/* setting up the display of the elements in the aside */
-.benefits {
-    margin-right: 20px;
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  footer {
     padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-/* setting up the overall spacing and color for the aside */
-.benefit {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-/* display settings for the aside header */
-.awesome h3 {
-    color: #ffffff;
-    margin-bottom: 10px;
     text-align: center;
+    color: rgba(232, 102, 236);
+  }
+
+.heart {
+  color: red;
 }
-/* display settings for the aside images */
-.awesome img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-/* display settings for the footer */
-footer {
-    font-size: 12px;
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
+
+  section {
+    flex: 4;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h2 {
+  position:relative;
+  margin-top: -20px;
+  border:#fff;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 5px;
+  }
+  
+  article {
+    color: rgba(232, 102, 236);
+    border-style: dashed;
+    border-width: 3px;
+    border-color:#fff;
+    padding: 10px;
+    width: 33.33%;
+    margin: 20px;
+  }
+
+  pre {
+    color:#fff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%, rgba(232, 102, 236, 0.6)100%);  
+    border-radius: 5px;
+    padding-top: 10px;
+    user-select:auto;
+
+  }
+  
+
+  @media screen and (max-width: 992px) {
+ article {
+    width: 50%;  
+  }}
+  @media screen and (max-width: 768px) {
+    article {
+        width: 100%;   
+  }}
