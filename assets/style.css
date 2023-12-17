@@ -13,31 +13,39 @@
   body {
     margin: 0;
   }
- /* Element selector setting the sizing and colors for the header containing my name */
+ /* Element selector setting the spacing and colors for the header containing my name */
 header {
-    padding: 10px;
+    padding-left: 10px;
     background-color: var(--dark);
     color: var(--light);
 }
 /* Going in a level deeper than the header and defining the display and size for "Meredith McDonald" */
 .header-box {
-    margin: 5px;
+    margin-top: 50px;
     display: inline-block;
     font-size: 25px;
     background-color: var(--light);
     color: var(--dark);
     width: 200px;
-    height: 100px;
+    height: 90px;
     padding: 10px;
 }
 
-/* Setting up the style, size, spacing, and text for the navigation links in the header */
+/* Setting up the behavior of the navigation links in the header */
 header nav {
-    padding-top: 40px;
-    margin-right: 20px;
-    float: right;
-    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
 }
+@media screen and (max-width: 768px) {
+  header nav {
+    justify-content: center;  
+   }}
+
+   @media screen and (max-width: 992px) {
+    header nav {
+      justify-content: flex-end;  
+     }}
 /* Style for the display of the nav links in the header */
 header nav ul li {
     display: inline-block;
