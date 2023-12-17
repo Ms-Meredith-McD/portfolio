@@ -1,51 +1,59 @@
+
+/* Universal styling for the page naming preferred font family, box, and background color */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color:rgb(253, 253, 253); */
   }
 
+  /* selecting theme colors */
 :root {
   --dark:  rgb(33, 22, 75);
   --light: rgb(129, 124, 148);
 
 }
-  
+/* taking away margins for the entire body unless I overried */
   body {
     margin: 0;
   }
- /* Element selector setting the spacing and colors for the header containing my name */
+ /* Element selector setting the spacing and colors for the header containing my name and the nav */
 header {
     padding-left: 10px;
     background-color: var(--dark);
     color: var(--light);
 }
-/* Going in a level deeper than the header and defining the display and size for "Meredith McDonald" */
+/* Going in a level deeper than the header and defining the display, size and style for my name and the box around it*/
 .header-box {
     margin-top: 50px;
     display: inline-block;
     font-size: 25px;
     background-color: var(--light);
     color: var(--dark);
-    width: 200px;
-    height: 90px;
+    width: 250px;
+    height: 55px;
     padding: 10px;
 }
-
+/* setting up my name to be inline with a space between first name and last name */
+.header-box span {
+  display: inline-block;
+  margin-right: 1px;
+}
 /* Setting up the behavior of the navigation links in the header */
 header nav {
     display: flex;
     justify-content: flex-end;
     padding-right: 10px;
 }
+
+/* setting up the header to be responsive to viewport sizes */
+@media screen and (max-width: 992px) {
+  header nav {
+    justify-content: flex-end;  
+   }}
 @media screen and (max-width: 768px) {
   header nav {
     justify-content: center;  
    }}
 
-   @media screen and (max-width: 992px) {
-    header nav {
-      justify-content: flex-end;  
-     }}
 /* Style for the display of the nav links in the header */
 header nav ul li {
     display: inline-block;
@@ -56,18 +64,13 @@ header nav ul li {
 a {
     color: var(--light);
 }
+/* setting up flex behavior and font color for the main part of the body */
   main {
     display: flex;
     flex-wrap: wrap;
     color: var(--dark);
   }
   
-  footer {
-    padding: 20px;
-    text-align: center;
-    color: rgba(232, 102, 236);
-  }
-
   section {
     flex: 4;
     padding: 10px;
@@ -87,23 +90,3 @@ a {
     width: 75%;
   }
 
-  pre {
-    color:#fff;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%, rgba(232, 102, 236, 0.6)100%);  
-    border-radius: 5px;
-    padding-top: 10px;
-    user-select:auto;
-
-  }
-  
-
-  @media screen and (max-width: 992px) {
- article {
-    width: 50%;  
-  }}
-  @media screen and (max-width: 768px) {
-    article {
-        width: 100%;   
-  }}
