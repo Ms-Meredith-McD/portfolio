@@ -45,15 +45,6 @@ header nav {
     padding-right: 10px;
 }
 
-/* setting up the header to be responsive to viewport sizes */
-@media screen and (max-width: 992px) {
-  header nav {
-    justify-content: flex-end;  
-   }}
-@media screen and (max-width: 768px) {
-  header nav {
-    justify-content: center;  
-   }}
 
 /* Style for the display of the nav links in the header */
 header nav ul li {
@@ -94,8 +85,9 @@ a {
   }
 
   /* defined settings for the three h2 headings */
-  h2 {
+  section h2 {
     margin-right: 5px;
+    flex: 0 0 250px;
    } 
   
    /* defined settings for the content within the article, keeping it to the right of the h2 as well */
@@ -120,3 +112,13 @@ a {
     padding: 10px;
     
   }
+
+  /* setting up the header to be responsive to viewport sizes */
+@media screen and (max-width: 992px) {
+  header nav {
+    justify-content: flex-end;  
+   }}
+@media screen and (max-width: 768px) {
+  header nav {
+    justify-content: center;  
+   }}
