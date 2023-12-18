@@ -9,7 +9,7 @@
 :root {
   --dark:  rgb(33, 22, 75);
   --light: rgb(129, 124, 148);
-
+  --border-left: black; 
 }
 /* taking away margins for the entire body unless I overried */
   body {
@@ -100,20 +100,20 @@ a {
   
    /* defined settings for the content within the article, keeping it to the right of the h2 as well */
   article {
-    border-left: 3px solid black;
+    border-left: 3px solid var(--border-left);
     padding-left: 20px;
     width: 75%;
  
 
   }
   figure {
-    border-left: 3px solid black;
+    border-left: 3px solid var(--border-left);
     padding-left: 20px;
     width: 75%;
   }
 
   .contact-me ul {
-    border-left: 3px solid black;
+    border-left: 3px solid var(--border-left);
   }
   .contact-me ul li {
     display: inline-block;
