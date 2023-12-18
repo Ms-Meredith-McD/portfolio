@@ -32,6 +32,7 @@ header {
     height: 55px;
     padding: 10px;
 }
+
 /* setting up my name to be inline with a space between first name and last name */
 .header-box span {
   display: inline-block;
@@ -63,6 +64,7 @@ header nav ul li {
   /* removing the default blue color and underline from the nav links */
 a {
     color: var(--light);
+    font-size:larger;
 }
 /* created container for background image to sit under header and above the main section */
 .background-container {
@@ -89,7 +91,6 @@ a {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 75%;
   }
 
   /* defined settings for the three h2 headings */
