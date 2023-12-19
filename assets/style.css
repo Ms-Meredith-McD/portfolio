@@ -59,7 +59,7 @@ a {
     font-size:larger;
 }
 /* created container for background image to sit under header and above the main section */
-.background-container {
+.background {
   height: 200px;
   width: 100%;
   margin-bottom: 25px;
