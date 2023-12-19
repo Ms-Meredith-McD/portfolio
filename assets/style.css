@@ -113,12 +113,12 @@ a {
 .small {
   display: flex;
   flex-direction: row;
-  width: 250px;
-  height: 250px;
+  /* width: 250px;
+  height: 250px; */
 }
 
 .small img {
-  width: 250px;
+  width: 1049px;
   height: 250px;
 }
 
