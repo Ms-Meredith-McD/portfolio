@@ -31,6 +31,7 @@ header {
     width: 250px;
     height: 55px;
     padding: 10px;
+    border-radius: 10px 0px 10px 0px;
 }
 
 /* setting up my name to be inline with a space between first name and last name */
@@ -68,20 +69,13 @@ a {
   background-position: center;
  }
 
-
-/* setting up flex behavior and font color for the main part of the body */
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    color: var(--dark);
-  }
 /* defined settings for basic parameters of the three sections*/
   section {
-    flex: 4;
+    /* flex: 4; */
     padding: 10px;
     margin: 10px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   /* defined settings for the three h2 headings */
@@ -95,15 +89,84 @@ a {
     border-left: 3px solid var(--border-left);
     padding-left: 20px;
     width: 75%;
- 
+    margin-bottom: 10px;
 
   }
-  figure {
-    border-left: 3px solid var(--border-left);
-    padding-left: 20px;
-    width: 75%;
+
+  .work {
+    display: flex;
+  }
+   
+  .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
   }
 
+#big {
+  display: flex;
+  /* flex-direction:column; */
+  width: 100%;
+}
+
+.small {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  height: 250px;
+}
+
+.small img {
+  width: 250px;
+  height: 250px;
+}
+
+.image-container {
+  position:relative;
+  margin: 10px;
+}
+
+.image-name {
+  position:absolute;
+  bottom: 20px;
+  left: 50px;
+  font-weight: bolder;
+  font-size:x-large;
+  background-color: var(--light);
+    color: var(--dark);
+    width: 170px;
+    height: 55px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.image-name2 {
+   position: absolute;
+   bottom: 5px;
+   left: 50px;
+   font-weight: bolder;
+   font-size: x-large;
+   background-color: var(--light);
+   color: var(--dark);
+   height: 75px;
+   width: 170px;
+   padding: 10px;
+   border-radius: 10px;
+   padding: 10px;
+  }
+  .image-name3 {
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+    font-weight: bolder;
+    font-size: x-large;
+    background-color: var(--light);
+    color: var(--dark);
+    height: 75px;
+    width: 170px;
+    padding: 10px;
+    border-radius: 10px;
+   }
   .contact-me ul {
     border-left: 3px solid var(--border-left);
   }
