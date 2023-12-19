@@ -9,9 +9,9 @@
 :root {
   --dark:  rgb(33, 22, 75);
   --light: rgb(129, 124, 148);
-  --border-left: black; 
+  --border-right: black; 
 }
-/* taking away margins for the entire body unless I overried */
+/* taking away margins for the entire body unless I overide */
   body {
     margin: 0;
   }
@@ -82,13 +82,14 @@ a {
   section h2 {
     margin-right: 5px;
     flex: 0 0 250px;
+      border-right: 3px solid var(--border-right);
    } 
   
    /* defined settings for the content within the article, keeping it to the right of the h2 as well */
   article {
-    border-left: 3px solid var(--border-left);
+    /* border-left: 3px solid var(--border-left); */
     padding-left: 20px;
-    width: 75%;
+    /* width: 75%; */
     margin-bottom: 10px;
 
   }
@@ -99,7 +100,8 @@ a {
    
   .projects {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   
   }
@@ -115,10 +117,11 @@ a {
   flex-direction: row;
   /* width: 250px;
   height: 250px; */
+  flex: 1 1 250px;
 }
 
 .small img {
-  width: 1049px;
+  /* flex: 1 1 600px; */
   height: 250px;
 }
 
@@ -135,7 +138,7 @@ a {
   font-size:x-large;
   background-color: var(--light);
     color: var(--dark);
-    width: 170px;
+    /* width: 170px; */
     height: 55px;
     padding: 10px;
     border-radius: 10px;
