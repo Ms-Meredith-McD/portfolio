@@ -100,10 +100,7 @@ section h2 {
 }
 
 /* Three articles in the projects */
-article:hover {
-  box-shadow:inset 0px 0px 8px
-  rgb(65, 4, 163), 0 0 1.5px
-  rgba(65, 4, 163);
+article {
   padding-left: 20px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -113,13 +110,19 @@ article:hover {
 
 
 /* Biggest main articles */
-#big {
+#big:hover {
+  box-shadow:inset 0px 0px 8px
+  rgb(65, 4, 163), 0 0 1.5px
+  rgba(65, 4, 163);
   display: flex;
   width: 100%;
 }
 
 /* Two smaller articles */
-.small {
+.small:hover {
+  box-shadow:inset 0px 0px 8px
+  rgb(65, 4, 163), 0 0 1.5px
+  rgba(65, 4, 163);
   display: flex;
   flex-direction: row;
   flex: 0 0 50px;
