@@ -95,8 +95,9 @@ section {
 /*Three main headings*/
 section h2 {
   margin-right: 5px;
-  flex: 0 0 250px;
+  /* flex: 0 0 250px; */
   border-right: 3px solid var(--border-right);
+  flex: 0 0 20%;
 }
 
 /* Three articles in the projects */
@@ -107,15 +108,19 @@ article {
   color: var(--dark);
 }
 
+#big {
+  flex: 1 1 100%;
+}
 
+.small {
+  flex: 1 1 50%;
+}
 
 /* Biggest main articles */
 #big:hover {
   box-shadow:inset 0px 0px 8px
   rgb(65, 4, 163), 0 0 1.5px
   rgba(65, 4, 163);
-  display: flex;
-  width: 100%;
 }
 
 /* Two smaller articles */
@@ -123,11 +128,7 @@ article {
   box-shadow:inset 0px 0px 8px
   rgb(65, 4, 163), 0 0 1.5px
   rgba(65, 4, 163);
-  display: flex;
-  flex-direction: row;
-  flex: 0 0 50px;
 }
-
 /* Two smaller images */
 .small img {
   height: 250px;
@@ -154,6 +155,10 @@ article {
   transition: all 0.5s ease-in-out;
 }
 
+img.project {
+  width:100%;
+}
+
 
 .contact-me ul {
   border-left: 3px solid var(--border-left);
@@ -175,5 +180,15 @@ article {
   header nav {
     justify-content: center;
     flex-direction: column;
+  }
+  .small {
+    flex: 1 1 100%;
+  }
+  section {
+    flex-direction: column;
+
+  }
+  section h2 {
+    border-right: 0;
   }
 }
