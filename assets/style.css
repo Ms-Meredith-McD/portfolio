@@ -1,64 +1,67 @@
-
-/* Universal styling for the page naming preferred font family, box, and background color */
 * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  /* selecting theme colors */
+
 :root {
-  --dark:  rgb(33, 22, 75);
+  --dark: rgb(33, 22, 75);
   --light: rgb(129, 124, 148);
-  --border-right: black; 
-}
-/* taking away margins for the entire body unless I overide */
-  body {
-    margin: 0;
-  }
- /* Element selector setting the spacing and colors for the header containing my name and the nav */
-header {
-    padding-left: 10px;
-    background-color: var(--dark);
-    color: var(--light);
-}
-/* Going in a level deeper than the header and defining the display, size and style for my name and the box around it*/
-.header-box {
-    margin-top: 50px;
-    display: inline-block;
-    font-size: 25px;
-    background-color: var(--light);
-    color: var(--dark);
-    width: 250px;
-    height: 55px;
-    padding: 10px;
-    border-radius: 10px 0px 10px 0px;
+  --border-right: black;
 }
 
-/* setting up my name to be inline with a space between first name and last name */
+body {
+  margin: 0;
+}
+
+/* Main background of the header */
+header {
+  padding-left: 10px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+/* Box around my name in the header*/
+.header-box {
+  margin-top: 50px;
+  display: inline-block;
+  font-size: 25px;
+  background-color: var(--light);
+  color: var(--dark);
+  width: 250px;
+  height: 55px;
+  padding: 10px;
+  border-radius: 10px 0px 10px 0px;
+}
+
+/* My name */
 .header-box span {
   display: inline-block;
   margin-right: 1px;
 }
-/* Setting up the behavior of the navigation links in the header */
+
+/* Navigation box */
 header nav {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 
 
-/* Style for the display of the nav links in the header */
+/* Navigation list */
 header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-    padding-top: 30px;
+  display: inline-block;
+  margin-left: 25px;
+  padding-top: 30px;
 }
-  /* removing the default blue color and underline from the nav links */
+
+/*Removing underlines and blue from all links*/
 a {
-    color: var(--light);
-    font-size:larger;
+  color: var(--light);
+  font-size: larger;
 }
-/* created container for background image to sit under header and above the main section */
+
+/* Background below header */
 .background {
   height: 200px;
   width: 100%;
@@ -67,124 +70,107 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
- }
+}
 
-/* defined settings for basic parameters of the three sections*/
-  section {
-    /* flex: 4; */
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    /* flex-wrap: wrap; */
-  }
 
-  /* defined settings for the three h2 headings */
-  section h2 {
-    margin-right: 5px;
-    flex: 0 0 250px;
-      border-right: 3px solid var(--border-right);
-   } 
-  
-   /* defined settings for the content within the article, keeping it to the right of the h2 as well */
-  article {
-    /* border-left: 3px solid var(--border-left); */
-    padding-left: 20px;
-    /* width: 75%; */
-    margin-bottom: 10px;
+/* Holder for Work header and projects */
+.accomplishments {
+  display: flex;
+}
 
-  }
-
-  .work {
-    display: flex;
-  }
-   
-  .projects {
+/* Projects with sections and articles */
+.projects {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  
-  }
+}
 
+/*Three main sections*/
+section {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}
+
+/*Three main headings*/
+section h2 {
+  margin-right: 5px;
+  flex: 0 0 250px;
+  border-right: 3px solid var(--border-right);
+}
+
+/* Three articles in the projects */
+article:hover {
+  box-shadow:inset 0px 0px 8px
+  rgb(65, 4, 163), 0 0 1.5px
+  rgba(65, 4, 163);
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+
+
+/* Biggest main articles */
 #big {
   display: flex;
-  /* flex-direction:column; */
   width: 100%;
 }
 
+/* Two smaller articles */
 .small {
   display: flex;
   flex-direction: row;
-  /* width: 250px;
-  height: 250px; */
-  flex: 1 1 250px;
+  flex: 0 0 50px;
 }
 
+/* Two smaller images */
 .small img {
-  /* flex: 1 1 600px; */
   height: 250px;
 }
 
+/* All images */
 .image-container {
-  position:relative;
+  position: relative;
   margin: 10px;
 }
 
+/* All image labels */
 .image-name {
-  position:absolute;
+  position: absolute;
   bottom: 20px;
   left: 50px;
   font-weight: bolder;
-  font-size:x-large;
+  font-size: x-large;
   background-color: var(--light);
-    color: var(--dark);
-    /* width: 170px; */
-    height: 55px;
-    padding: 10px;
-    border-radius: 10px;
+  color: var(--dark);
+  height: 55px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
-.image-name2 {
-   position: absolute;
-   bottom: 5px;
-   left: 50px;
-   font-weight: bolder;
-   font-size: x-large;
-   background-color: var(--light);
-   color: var(--dark);
-   height: 75px;
-   width: 170px;
-   padding: 10px;
-   border-radius: 10px;
-   padding: 10px;
-  }
-  .image-name3 {
-    position: absolute;
-    bottom: 5px;
-    left: 50px;
-    font-weight: bolder;
-    font-size: x-large;
-    background-color: var(--light);
-    color: var(--dark);
-    height: 75px;
-    width: 170px;
-    padding: 10px;
-    border-radius: 10px;
-   }
-  .contact-me ul {
-    border-left: 3px solid var(--border-left);
-  }
-  .contact-me ul li {
-    display: inline-block;
-    padding: 10px;
-    
-  }
 
-  /* setting up the header to be responsive to viewport sizes */
+
+.contact-me ul {
+  border-left: 3px solid var(--border-left);
+}
+
+.contact-me ul li {
+  display: inline-block;
+  padding: 10px;
+  color: var(--dark);
+}
+
 @media screen and (max-width: 992px) {
   header nav {
-    justify-content: flex-end;  
-   }}
+    justify-content: flex-end;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header nav {
-    justify-content: center;  
-   }}
+    justify-content: center;
+    flex-direction: column;
+  }
+}
